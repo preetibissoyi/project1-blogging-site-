@@ -1,11 +1,11 @@
 const validation  = require("../validator/validation");
-
 const authors = require("../models/authorModel.js");
-
 const jwt = require("jsonwebtoken");
 
 
 let { isValidName, isValidEmail, isValidPassword, isEmpty } = validation //Destructuring
+
+
 
 const createAuthor= async function(req,res){ // Checking body is empty or not
     try{
@@ -74,24 +74,19 @@ const createAuthor= async function(req,res){ // Checking body is empty or not
 /* --------------------------------------------------AUTHOR-LOGIN---------------------------------------------- */
 
 const loginAuthor = async function (req, res) {
-
     try{
-
         let emailId = req.body.emailId;
     let password = req.body.password;
-
+    
     if(!isValidEmail(emailId)){ // Email validation
         return res.status(400).send({status:false,message:"Please provide valid Email"})
     }
-
     if(!isValidPassword(password)){ // Password validation
         return res.status(400).send({status:false,message:"Your password must have characters, contain at least one number or symbol, and have a mixture of uppercase and lowercase letters."})
     }
-  
     let author = await authors.findOne( { emailId: emailId, password: password } );
     if (!author)
       return res.send( { status: false, msg: "username or the password is not corerct" } );
-  
     let token = jwt.sign(
       {
         authorId: author._id.toString(),

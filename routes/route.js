@@ -7,7 +7,7 @@ const blogController= require("../controllers/blogController")
 
 const Middleware = require("../Middleware/auth")
 
-router.post('/authors',authorController.createAuthor) // Creating Author Data ok
+router.post('/author',authorController.createAuthor) // Creating Author Data ok
 
 router.post('/login',authorController.loginAuthor)  //User login and generate token ok
 

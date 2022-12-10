@@ -65,6 +65,4 @@ const auth2= async function(req,res,next){
 
 
 module.exports.authenticate=authenticate
-
-
 module.exports.auth2=auth2
