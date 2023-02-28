@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Raj141020/Project-1-Blogging-Site.git"
+    "url": "https://github.com/preetibissoyi/project1-blogging-site-.git"
   },
-  "author": "Raj, Monalisa, Anshika, Preeti",
+  "author": " Preeti bissoyi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Raj141020/Project-1-Blogging-Site/issues"
+    "url": "https://github.com/preetibissoyi/project1-blogging-site-.git"
   },
-  "homepage": "https://github.com/Raj141020/Project-1-Blogging-Site#readme",
+  "homepage": "https://github.com/preetibissoyi/project1-blogging-site-.git",
   "dependencies": {
     "body-parse": "^0.1.0",
     "cors": "^2.8.5",
